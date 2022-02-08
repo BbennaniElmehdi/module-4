@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+    <script scr="script.js">
+const hello = {
+	bon: 'Hello',	
+};
+
+(function () {
+	hello.any = function (array) {
+		return (hello.bon + " " + array);
+	}
+}());
+
+const bye= {
+	good: 'GoodBye'
+};
+
+(function () {
+	bye.any = function (array) {
+		return (bye.good + " " + array);
+	}
+}());
+
+
+(function () {
+	var arrays = ['med', 'John', 'Jen', 'Jason', 'poul', 'Frank', 'Larry', 'Paula', 'Laura', 'Jim'];
+	for (var i = 0; i < arrays.length; i++) {
+		var name = arrays[i];
+		var firstLetter = name.charAt(0).toUpperCase();
+		if (firstLetter === 'j') {
+			console.log(bye.good(name));
+		
+		} else {
+			console.log(hello.bon(name));
+		
+		}
+  }
+})();
+
+    </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
